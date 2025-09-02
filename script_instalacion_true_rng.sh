@@ -69,7 +69,7 @@ echo "[INFO] Leyendo 16 bytes desde /dev/TrueRNG0..."
 echo
 
 # 9. Ejecutar la prueba
-cat /dev/TrueRNG0 | hexdump -C | head
+head -c 64 /dev/TrueRNG0 | od -tx1 -v
 
 echo
 echo "[OK] Si ves datos en hexadecimal, el generador está funcionando."
